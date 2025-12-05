@@ -55,15 +55,11 @@ python3 interpolate_video_v2.py --checkpoint "cfm_checkpoints_v2/best_model_v2.p
 
 ## 🔬 Physics Metrics
 The model calculates the average energy per collision as
-\[
-E_{\text{col}} = \frac{\sum_i \Phi_i}{\sum_i R_i},
-\]
-where $\Phi_i$ is the energy flux (W) and $R_i$ is the collision rate (Hz).
 
-This is further split into normal and shear components,
-\[
-E_{n,\text{col}} \quad \text{and} \quad E_{s,\text{col}},
-\]
-to analyze the dissipation mode.
+$$
+E_{\text{col}} = \frac{\sum \text{Flux (W)}}{\sum \text{Collision Rate (Hz)}}
+$$
+
+This is further split into normal ($E_{n,\text{col}}$) and shear ($E_{s,\text{col}}$) components to analyze the dissipation mode.
 
 
