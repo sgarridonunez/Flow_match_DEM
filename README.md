@@ -6,8 +6,8 @@
 This repository contains the V2 implementation of a **Conditional Flow Matching (CFM)** surrogate model for granular mechanics.
 
 It predicts the joint distribution of:
-1.  **Normal Energy Flux** (Impact Power)
-2.  **Shear Energy Flux** (Frictional Power)
+1.  **Normal Energy Flux** (Impact)
+2.  **Shear Energy Flux** (Friction)
 3.  **Collision Frequency** (Contacts per timestep)
 
 This allows the model to derive the physical metrics: **Average Energy per Collision ($E_{col}$)** due to shearing and compression, which are crucial for mechanochemical reaction kinetics. Furthermore, it's possible to vary rpm, ball size, and fill ratio.
