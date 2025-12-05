@@ -54,7 +54,16 @@ python3 interpolate_video_v2.py --checkpoint "cfm_checkpoints_v2/best_model_v2.p
 - **Target:** 3D Vector `[log(Flux_N), log(Flux_S), log(Collisions)]`.
 
 ## 🔬 Physics Metrics
-The model calculates the average energy per collision as:
-$ E_{col} = \frac{\sum \text{Flux (Watts)}}{\sum \text{Collision Rate (Hz)}} $
-This is further split into Normal ($E_{n,col}$) and Shear ($E_{s,col}$) components to analyze the dissipation mode.
+The model calculates the average energy per collision as
+\[
+E_{\text{col}} = \frac{\sum_i \Phi_i}{\sum_i R_i},
+\]
+where $\Phi_i$ is the energy flux (W) and $R_i$ is the collision rate (Hz).
+
+This is further split into normal and shear components,
+\[
+E_{n,\text{col}} \quad \text{and} \quad E_{s,\text{col}},
+\]
+to analyze the dissipation mode.
+
 
