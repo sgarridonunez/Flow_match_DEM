@@ -10,7 +10,7 @@ It predicts the joint distribution of:
 2.  **Shear Energy Flux** (Frictional Power)
 3.  **Collision Frequency** (Contacts per timestep)
 
-This allows the model to derive the physical metric: **Average Energy per Collision ($E_{col}$)**, which is crucial for mechanochemical reaction kinetics.
+This allows the model to derive the physical metrics: **Average Energy per Collision ($E_{col}$)** due to shearing and compression, which are crucial for mechanochemical reaction kinetics. Furthermore, it's possible to vary rpm, ball size, and fill ratio.
 
 ## 📂 Structure
 
