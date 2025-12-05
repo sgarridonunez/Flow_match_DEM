@@ -30,7 +30,7 @@ python3 cfm_data_extraction_v2.py --root "/path/to/simulations" --output "extrac
 ```
 
 ### 2. Training
-Train the Flow Matching model.
+Train the Flow Matching model or use the pre-trained model.
 ```bash
 python3 train_cfm_v2.py --data "extracted_energy_data_v2.pkl" --epochs 1000
 ```
