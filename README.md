@@ -1,5 +1,8 @@
 # Generative Physics Surrogate V2: Collision Frequency & Energy Flux
 
+
+![Example Image](Figure 2025-12-05 051654.png)
+
 This repository contains the V2 implementation of a **Conditional Flow Matching (CFM)** surrogate model for granular mechanics.
 
 It predicts the joint distribution of:
