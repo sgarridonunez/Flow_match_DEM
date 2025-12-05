@@ -51,7 +51,7 @@ python3 interpolate_video_v2.py --checkpoint "cfm_checkpoints_v2/best_model_v2.p
 - **Architecture:** ResNet-based Vector Field (8 layers, 512 hidden dim).
 - **Time Embedding:** Sinusoidal.
 - **Loss:** Conditional Flow Matching (MSE between predicted velocity and optimal transport path).
-- **Target:** 3D Vector `[log(Flux_N), log(Flux_S), log(Collisions)]`.
+- **Target:** 3D Vector `[log(Flux_N), log(Flux_S), log(Collisions)]` (Normal (compression), tangential (shear), collision rate).
 
 ## 🔬 Physics Metrics
 The model calculates the average energy per collision as
