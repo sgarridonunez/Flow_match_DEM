@@ -2,7 +2,7 @@
 
 This repository contains the V2 implementation of a **Conditional Flow Matching (CFM)** surrogate model for granular mechanics.
 
-Unlike V1 (which only predicted energy flux), **V2** predicts the joint distribution of:
+It predicts the joint distribution of:
 1.  **Normal Energy Flux** (Impact Power)
 2.  **Shear Energy Flux** (Frictional Power)
 3.  **Collision Frequency** (Contacts per timestep)
