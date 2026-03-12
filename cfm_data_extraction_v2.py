@@ -21,8 +21,6 @@ def parse_conditions_from_path(path):
     path = os.path.normpath(path)
     parts = path.split(os.sep)
     
-    # We look at the last few folders. The .dem file is usually in a folder named after the conditions 
-    # or the conditions are in the hierarchy.
     
     conditions = {
         "rpm": None,
@@ -68,9 +66,7 @@ def parse_conditions_from_path(path):
                     if conditions["rpm"] is None:
                         conditions["rpm"] = val
             
-            # Stop if all found? 
-            # Sometimes there are multiple numbers (dates, ids). 
-            # We rely on the user's description being the primary differentiator.
+
             
     return conditions
 
@@ -91,7 +87,6 @@ def extract_energy_from_deck(deck_path, target_dt=0.01):
 
     # Property names mapping
     # Note: These names must match exactly what's in the EDEM deck. 
-    # Based on previous script: 'Particle-Wall Normal Energy Loss', etc.
     prop_names = deck.creatorData.simulationCustomPropertyNames
     
     def get_prop_index(name_list, pattern):
@@ -101,7 +96,7 @@ def extract_energy_from_deck(deck_path, target_dt=0.01):
         return None
 
     # We need indices for Normal and Tangential Energy Loss (Particle-Wall and Particle-Particle)
-    # The previous script summed PW and PP losses.
+
     
     idxs = {}
     patterns = {
@@ -154,7 +149,6 @@ def extract_energy_from_deck(deck_path, target_dt=0.01):
                 # "numcol_SS = deck.timestep[t].collision.surfSurf.getNumCollisions()"
                 
                 # Note: edempy access might fail if collisions not processed or different API version.
-                # Assuming standard API as provided by user.
                 try:
                     numcol_sg = deck.timestep[t].collision.surfGeom.getNumCollisions()
                 except:
