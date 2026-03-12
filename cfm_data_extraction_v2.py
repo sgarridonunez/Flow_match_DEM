@@ -57,7 +57,6 @@ def parse_conditions_from_path(path):
             # Check for Fill Ratio (decimal value, usually < 1.0 but not strictly)
             # We assume RPM is integer-like (e.g. 300) and Fill Ratio is float-like (e.g. 0.2, 0.25)
             # However, RPM could be float 300.0. 
-            # Context from user: "only value with decimals is the fill ratio"
             if is_float(token):
                 val = float(token)
                 if '.' in token:
